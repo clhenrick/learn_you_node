@@ -4,5 +4,7 @@ var buffer = fs.readFileSync(file); // read the file synchronously and convert i
 var fileText = buffer.toString(); // convert the file buffer to a string of text
 var splitText = fileText.split('\n'); // splitting our string into an array using a newline as the delimiter
 
+// we have to log splitText.length -1 because there is no newline at the end of the file.
+// remember, we are counting the number of newlines, not the number of items in the array for this exercise.
 console.log(splitText.length-1);
 
